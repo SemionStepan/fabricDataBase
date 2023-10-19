@@ -2,13 +2,19 @@
 #define GROUP_H
 
 #include "worker.h"
+#include <vector>
 #include <string>
+#include <fstream>
+
 using namespace std;
 
 class Group
 {
+private:
     string Name;
-    Worker *arr[];
+    fstream _file;
+    vector<Worker> workers;
+
 public:
     Group();
 
