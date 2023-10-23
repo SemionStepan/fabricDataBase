@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 
+#include "database.h"
 #include "group.h"
 
 using namespace std;
@@ -11,6 +12,7 @@ using namespace std;
 class Fabric
 {
 private:
+    DataBase _dataBase;
     vector<Group> _groups;
     const string MenuErrorMsg= " - введен не корректный элемент меню";
     const string _menu[4] = { " Записать в базу данных фабрики данные ( количество групп, [количество групп] раз (название группы, количество рабочих,  [количество рабочих] раз (имя, фамилию, год)))",
@@ -20,7 +22,7 @@ private:
                             };
 
 public:
-    Fabric();
+    Fabric(string fileName);
     ~Fabric();
 
     void exec();

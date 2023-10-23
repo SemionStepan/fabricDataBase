@@ -2,12 +2,14 @@
 #define DATABASE_H
 
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
 class DataBase
 {
 private:
+    const string _ext = ".database";
     fstream _file;
 
 public:

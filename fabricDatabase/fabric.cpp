@@ -1,7 +1,8 @@
 #include "fabric.h"
 
-Fabric::Fabric()
-{}
+Fabric::Fabric(string fileName)
+{
+}
 
 int Fabric::menu()
 {
