@@ -1,6 +1,6 @@
 #include "fabric.h"
 
-Fabric::Fabric(vector<Group> &vec) : _groups(vec)
+Fabric::Fabric()
 {}
 
 int Fabric::menu()
