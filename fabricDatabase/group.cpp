@@ -4,3 +4,8 @@ Group::Group(string name)
 {
     _Name = name;
 }
+
+bool Group::save()
+{
+
+}
