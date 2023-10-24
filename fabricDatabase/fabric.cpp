@@ -1,8 +1,28 @@
 #include "fabric.h"
 
-Fabric::Fabric(string fileName)
+void Fabric::addDataBase()
 {
+    bool doWork = true;
+    do
+    {
+        cout << "Введите количество групп : " << endl;
+        string numberOfGroups = 0;
+        cin >> numberOfGroups;
+        _dataBase.save(numberOfGroups);
+
+        for(int i = 0; i < numberOfGroups; i++)
+        {
+            cout << "Введите название группы : " << endl;
+            string name ;
+            cin >> name;
+            Group group(name);
+        }
+    }
+    while(doWork);
 }
+
+Fabric::Fabric(string fileName)
+{}
 
 int Fabric::menu()
 {

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <stdlib.h>
 
 #include "database.h"
 #include "group.h"
@@ -20,6 +21,7 @@ private:
                               " Удалить всю базу данных",
                               " Завершить"
                             };
+    void addDataBase();
 
 public:
     Fabric(string fileName);

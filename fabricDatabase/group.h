@@ -14,7 +14,7 @@ private:
     vector<Worker> _workers;
 
 public:
-    Group();
+    Group(string name);
 
     inline string getName() { return _Name;}
 };

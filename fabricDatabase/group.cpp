@@ -1,6 +1,6 @@
 #include "group.h"
 
-Group::Group()
+Group::Group(string name)
 {
-
+    _Name = name;
 }
