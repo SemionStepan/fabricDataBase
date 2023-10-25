@@ -12,6 +12,9 @@ private:
     string _firstName;
     string _lastName;
     int _birthYear;
+    const string FirstName = "Имя :";
+    const string LastName = "Фамилия :";
+    const string BirthYear = "Год рождения :";
 
 public:
     Worker();

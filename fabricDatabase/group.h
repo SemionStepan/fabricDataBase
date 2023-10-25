@@ -17,6 +17,7 @@ public:
     Group(string name);
 
     inline string getName() { return _Name;}
+    bool save();
 };
 
 #endif // GROUP_H
