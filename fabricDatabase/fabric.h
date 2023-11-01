@@ -22,13 +22,13 @@ private:
                               " Завершить"
                             };
     void addDataBase();
+    int menu();
 
 public:
     Fabric(string fileName);
     ~Fabric();
 
     void exec();
-    int menu();
 };
 
 #endif // COLLECTIVE_H

@@ -22,7 +22,9 @@ void Fabric::addDataBase()
 }
 
 Fabric::Fabric(string fileName)
-{}
+{
+    DataBase _dataBase(fileName);
+}
 
 int Fabric::menu()
 {

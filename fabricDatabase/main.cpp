@@ -19,9 +19,9 @@
 
 #include "fabric.h"
 
-int main()
+int main(int argc, char* argv[])
 {
-    Fabric fabric();
+    Fabric fabric(argv[0]);
     fabric.exec();
     return 0;
 }
