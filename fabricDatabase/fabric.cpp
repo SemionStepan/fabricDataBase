@@ -5,17 +5,11 @@ void Fabric::addDataBase()
     bool doWork = true;
     do
     {
-        cout << "Введите количество групп : " << endl;
-        string numberOfGroups = 0;
-        cin >> numberOfGroups;
-        _dataBase.save(numberOfGroups);
+        _dataBase.save(ask(MenuGroupNumberMsg));
 
         for(int i = 0; i < numberOfGroups; i++)
         {
-            cout << "Введите название группы : " << endl;
-            string name ;
-            cin >> name;
-            Group group(name);
+            Group group(ask(MenuGroupNameMsg));
         }
     }
     while(doWork);
@@ -49,6 +43,14 @@ int Fabric::menu()
     } while(true);
 }
 
+string Fabric::ask(string msg)
+{
+    cout << msg << endl;
+    string str = 0;
+    cin >> str;
+  return str;
+}
+
 void Fabric::exec()
 {
     bool doExec = true;
@@ -57,13 +59,13 @@ void Fabric::exec()
         switch(menu())
         {
         case 1:
-
+            addDataBase();
         break;
         case 2:
-
+            _dataBase.kill(NULL);
         break;
         case 3:
-
+        _dataBase.selfDestruct();
         break;
         case 4:
             doExec = false;
