@@ -16,7 +16,7 @@ public:
     DataBase(string fileName);
 
     void save(string message);
-    void show();
+    void show(string message);
     void kill(string message);
     void selfDestruct();
 };

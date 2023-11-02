@@ -7,17 +7,16 @@
 
 using namespace std;
 
-class Group
+class Group : public vector<Worker>
 {
 private:
-    string _Name;
-    vector<Worker> _workers;
+    string _name;
 
 public:
-    Group(string name);
+    Group(string &name);
 
-    inline string getName() { return _Name;}
-    bool save(DataBase &database);
+    inline const string& name() { return _name;}
+    bool save(const DataBase &database);
 };
 
 #endif // GROUP_H

@@ -5,19 +5,21 @@ void Fabric::addDataBase()
     bool doWork = true;
     do
     {
-        _dataBase.save(ask(MenuGroupNumberMsg));
-
-        for(int i = 0; i < numberOfGroups; i++)
+        for(auto group : _groups) // сделать добавление имени группы
         {
-            Group group(ask(MenuGroupNameMsg));
+            for(auto worker : group)
+            {
+                worker.fillWorker();
+            }
         }
     }
-    while(doWork);
+    while(doWork); // Найти признак конца цикла
 }
 
 Fabric::Fabric(string fileName)
 {
     DataBase _dataBase(fileName);
+    vector<Group> _groups;
 }
 
 int Fabric::menu()

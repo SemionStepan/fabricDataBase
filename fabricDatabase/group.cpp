@@ -3,6 +3,7 @@
 Group::Group(string name)
 {
     _Name = name;
+    vector<Worker> _workers;
 }
 
 bool Group::save(DataBase &database)
