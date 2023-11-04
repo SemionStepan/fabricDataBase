@@ -5,8 +5,9 @@ void Fabric::addDataBase()
     bool doWork = true;
     do
     {
-        for(auto group : _groups) // сделать добавление имени группы
+        for(auto group : _groups)
         {
+            group.setName(ask(MenuGroupNameMsg));
             for(auto worker : group)
             {
                 worker.fillWorker();

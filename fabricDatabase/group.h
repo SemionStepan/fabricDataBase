@@ -15,7 +15,8 @@ private:
 public:
     Group(string &name);
 
-    inline const string& name() { return _name;}
+    inline const string& getName() { return _name; }
+    inline void setName(string newName) { _name = newName; }
     bool save(const DataBase &database);
 };
 
