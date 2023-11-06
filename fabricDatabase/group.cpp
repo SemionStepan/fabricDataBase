@@ -2,7 +2,7 @@
 
 Group::Group(string name)
 {
-    _Name = name;
+    _name = name;
     vector<Worker> _workers;
 }
 

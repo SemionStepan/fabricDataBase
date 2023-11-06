@@ -5,16 +5,20 @@ void Fabric::addDataBase()
     bool doWork = true;
     do
     {
+        bool allFilled = false;
         for(auto group : _groups)
-        {
+        {            
             group.setName(ask(MenuGroupNameMsg));
+            bool allFilled = false;
             for(auto worker : group)
             {
                 worker.fillWorker();
+                bool allFilled = true;
             }
         }
+        doWork = allFilled;
     }
-    while(doWork); // Найти признак конца цикла
+    while(doWork); // признак конца цикла это все заполненные рабочие
 }
 
 Fabric::Fabric(string fileName)
